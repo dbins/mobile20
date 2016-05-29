@@ -19,9 +19,15 @@
 		}
 		
 		
-		//$(document).ready(function(){
-		document.addEventListener("deviceready", onDeviceReady, false);
-		//});
+		$(document).ready(function(){
+			document.addEventListener("deviceready", onDeviceReady, false);
+		});
+		
+		$(document).on('click', 'a[href^="http"]', function (event) {
+			event.preventDefault();
+			window.open($(this).attr('href'), '_system');
+			return false;
+		});
 		 
 		function onDeviceReady() {
 			isPhoneGapReady = true;
@@ -30,6 +36,8 @@
 			// attach events for online and offline detection
 			document.addEventListener("online", onOnline, false);
 			document.addEventListener("offline", onOffline, false);
+			handleExternalURLs();
+			
 		}
 		
 		function networkDetection() {
@@ -51,6 +59,28 @@
 				}
 				
 			}	
+		}
+		
+		
+		function handleExternalURLs() {
+			// Handle click events for all external URLs
+			if (device.platform.toUpperCase() === 'ANDROID') {
+				$(document).on('click', 'a[href^="http"]', function (e) {
+					var url = $(this).attr('href');
+					navigator.app.loadUrl(url, { openExternal: true });
+					e.preventDefault();
+				});
+			}
+			else if (device.platform.toUpperCase() === 'IOS') {
+				$(document).on('click', 'a[href^="http"]', function (e) {
+					var url = $(this).attr('href');
+					window.open(url, '_system');
+					e.preventDefault();
+				});
+			}
+			else {
+				// Leave standard behaviour
+			}
 		}
 		
 		function onOnline() {
@@ -236,13 +266,14 @@
 								foto = "img/profissional.png"
 							}
 							
-							output += '<li id="' + codigo + '"><img style="height:200" width="200" src="' + foto + '" /><h3>' + nome + '</h3><p>Especialidade:' + especialidade + '</p><p>Telefone Comercial:' + telefone_comercial + '</p><p>Telefone Celular:' + telefone_celular + '</p><p>Proximo Agendamento:' + proximo_agendamento + '</p><p>&nbsp;</p><h4><a href="'+site+'" target="_blank" style="color:#FFFFFF">Clique aqui para agendar</a></h4></li>';
+							output += '<li id="' + codigo + '"><img style="height:200" width="200" src="' + foto + '" /><h3>' + nome + '</h3><p>Especialidade:' + especialidade + '</p><p>Telefone Comercial:' + telefone_comercial + '</p><p>Telefone Celular:' + telefone_celular + '</p><p>Proximo Agendamento:' + proximo_agendamento + '</p><p>&nbsp;</p><h4><a href="' + site + '" style = "color:#FFFFFF">Clique aqui para agendar</a></h4></li>';
 						});
 						$('#listview').append(output).listview('refresh');
 						$("#listview").listview("refresh");
 						$("#listview").show();
 						$("#myFilter").show();
 						$("#loading").hide();
+						handleExternalURLs();
 						}
 					});
 					
