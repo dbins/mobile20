@@ -8,6 +8,11 @@
 		var isConnected = true;
 		var isHighSpeed = false;
 		var tipo_conexao = "";
+		var celular_modelo = "";
+		var celular_plataforma = "";
+		var celular_uuid = "";
+		var celular_versao = "";
+		
 		var latitude = "";
 		var longitude = "";
 		var bairro = "";
@@ -37,6 +42,11 @@
 			document.addEventListener("online", onOnline, false);
 			document.addEventListener("offline", onOffline, false);
 			handleExternalURLs();
+			
+			celular_modelo = device.model;
+			celular_plataforma = device.platform;
+			celular_uuid = device.uuid;
+			celular_versao = device.version;
 			
 		}
 		
@@ -242,9 +252,10 @@
 					$("#myFilter").hide();
 					$("#loading").show();
 					$.ajax({
-					type: "GET",
+					type: "POST",
 					url: "http://www.fisioagenda.com.br/xml/xml_profissionais.php",
 					dataType: "xml",
+					data: {dia: dia, horario: horario, cidade: cidade, estado: estado, bairro: bairro, tipo: tipo, especialidade: especialidade, latitude: latitude, longitude: longitude, modelo: celular_modelo, plataforma: celular_plataforma, versao: celular_versao},
 					success: function(data) {
 						var output = "";
 						$('#listview').empty();
