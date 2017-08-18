@@ -117,7 +117,7 @@
 			
 			$.ajax({
 			type: "GET",
-			url: "http://www.fisioagenda.com.br/xml/xml_localizacao.php?latitude=" + latitude + "&longitude=" + longitude,
+			url: "http://www.fisioagenda.hospedagemdesites.ws/xml/xml_localizacao.php?latitude=" + latitude + "&longitude=" + longitude,
 			dataType: "xml",
 			success: function(data) {
 				
@@ -253,7 +253,7 @@
 					$("#loading").show();
 					$.ajax({
 					type: "POST",
-					url: "http://www.fisioagenda.com.br/xml/xml_profissionais.php",
+					url: "http://www.fisioagenda.hospedagemdesites.ws/xml/xml_profissionais.php",
 					dataType: "xml",
 					data: {dia: dia, horario: horario, cidade: cidade, estado: estado, bairro: bairro, tipo: tipo, especialidade: especialidade, latitude: latitude, longitude: longitude, modelo: celular_modelo, plataforma: celular_plataforma, versao: celular_versao},
 					success: function(data) {
@@ -350,7 +350,7 @@
 				// Send data to server through the ajax call
 				// action is functionality we want to call and outputJSON is our data
 				//formData : $('#check-contato').serialize()
-					$.ajax({url: 'http://www.fisioagenda.com.br/xml/ajax_contato.php',
+					$.ajax({url: 'http://www.fisioagenda.hospedagemdesites.ws/xml/ajax_contato.php',
 						data: {action : 'enviar', nome: $('#nome_contato').val(), email: $('#email_contato').val(), ddd_telefone: '00', numero_telefone: '00000000', mensagem: $('#mensagem_contato').val()},
 						type: 'post',                   
 						async: 'true',
