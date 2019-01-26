@@ -1,0 +1,30 @@
+.conteudo{ float:left; position:relative; width:99%; min-height:250px; /* margin:10px;*/ padding:8px; line-height:23px;}
+.produtos{ float:left; position:relative; width:19%; min-height:425px; margin:10px 19px 10px 37px; font-family:Segoe UI, Calibri, Arial, verdana;
+font-size:14px; color:#666; text-transform:uppercase; text-align:center;}
+.produtos-images{ float:left; position:relative; text-align:center;}
+.produtos-images:hover{opacity: 0.8; cursor:pointer; border:1px #e86c6e solid; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; -o-border-radius:3px;  }
+.produtos-preco{color:#e86c6e; font-size:22px; font-family: 'bebas_neueregular'; float:left; position:relative; width:100%;}
+#produtos-preco-promo{color:#ad2d36; font-size:15px; font-family: 'bebas_neueregular'; float:left; position:relative; width:100%;}
+.valor{ float:left; width:100%; position:relative; margin:5px 0 0 0; font-size:25px; font-family: 'bebas_neueregular';}
+.preco-promo{ text-decoration: line-through; font-size:15px; opacity:0.8; -webkit-opacity:0.8; -ms-opacity:0.8; -o-opacity:0.8; -moz-opacity:0.8;}
+.produtos-tit{ float:left; position:relative; width:100%;}
+
+.descprod{ float:left; position:relative; width:95%; margin:5px 5px 10px 5px;}
+.titulos{ float:left; position:relative; border-bottom:1px #e86c6e solid; margin:10px 0 0 0; width:100%; font-size:1.8em; color:#e86c6e; text-align:left; padding:5px; font-family: 'bebas_neueregular';}
+#descricao{ width:98%!important}
+.buyprod{ margin-top:10px;}
+.produtos-tit{ float:left; position:relative; width:100%;}
+#imgprod{ float:left; position:relative; max-width:300px; height:auto; margin:0 5px 5px 0; border:1px #f8d3d3 solid}
+.prodtotal{ float:left; margin:0 5px 0 -5px; position:relative; max-width:380px; height:auto;}
+.iconprod{ float:left; width:65px; position:relative; margin:1px; border:1px #f8d3d3 solid}
+.buyprod{ float:left; position:relative; max-width:280px;  margin-bottom: 10px;}
+.titprod{ font-size:25px; font-family: 'bebas_neueregular'; float:left; position:relative; width:100%;}
+.img{ width:100%; height:auto}
+
+ #owl-demo .item img{
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+

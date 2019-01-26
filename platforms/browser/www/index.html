@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta http-equiv="cleartype" content="on">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+	<title>FisioAgenda</title>
+
+	<!--Include JQM and JQ-->
+	<link rel="stylesheet" href="css/themes/jqmfb.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure.min.css" />
+	<script src="js/jquery.min.js"></script>
+
+	
+	<!--JQM globals you can edit or remove file entirely... note it needs to be loaded before jquerymobile js -->
+	<script src="js/jqm.globals.js"></script>
+	
+	<script src="js/jquery.mobile.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+</head>
+<body>
+
+	
+
+	<div data-role="page" id="main" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<h1 align="center">FisioAgenda!</h1>
+		</div>
+
+		<div data-role="main" id="main" class="ui-content">
+			<p><img src="img/fisioagenda.png" width="70%"></p>
+			<p>Procurando um profissional de fisioterapia?<br/> Deixa a gente te ajudar!</p>
+			<p>&nbsp;</p>
+			<p align="center"><a href="#etapa0" data-role="button">Clique aqui para começar!</a></p>
+			<p>&nbsp;</p>
+			<p>Não achou o que queria? Tem dúvidas ou sugestões?<br/>Entre em contato!</p>
+			<p align="center"><a href="#faleconosco" data-role="button">Mande sua mensagem!</a></p>
+		</div>
+
+	</div>
+	
+	
+	<div data-role="page" id="etapa0" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<h1 align="center">Vamos começar?</h1>
+		</div>
+
+		<div data-role="main" id="main" class="ui-content">
+			<h3 align="center">Você sabe qual o tipo de profissional que precisa?</h3>
+			<div style="width: 100%;text-align: center;">
+				<div style="display: inline-block;">
+					<img src="img/ok.png">
+					<p align="center"><a href="#etapa1" data-role="button">Sim</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/ajuda.png">
+					<p align="center"><a href="#ajuda1" data-role="button">Não</a></p>
+				</div>
+			</div>	
+		</div>
+
+	</div>
+	
+	<div data-role="page" id="ajuda1" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<h1 align="center">Seu perfil</h1>
+		</div>
+
+		<div data-role="main" id="main_etapa1" class="ui-content">
+			<h3 align="center">Qual o seu perfil?</h3>
+			<div style="width: 100%;text-align: center;">
+				<div style="display: inline-block;">
+					<img src="img/idade1.png">
+					<p align="center"><a href="#ajuda2" data-role="button">Homem - Jovem</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/idade2.png">
+					<p align="center"><a href="#ajuda2" data-role="button">Mulher - Jovem</a></p>
+				</div>
+				
+				
+				<div style="display:inline-block;">
+					<img src="img/idade3.png">
+					<p align="center"><a href="#ajuda2" data-role="button">Homem - Adulto</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/idade4.png">
+					<p align="center"><a href="#ajuda2" data-role="button">Mulher - Adulta</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/idade5.png">
+					<p align="center"><a href="#ajuda2" data-role="button">Homem - Idoso</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/idade6.png">
+					<p align="center"><a href="#ajuda2" data-role="button">Mulher - Idosa</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/voltar.png">
+					<p align="center"><a href="#"  onclick="goBack()" data-role="button">Voltar</a></p>
+				</div>
+				
+				
+			</div>
+		</div>
+		<div data-role="footer">
+			
+		</div>
+
+	</div>
+	
+	<div data-role="page" id="ajuda2" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<h1 align="center">Seu problema</h1>
+		</div>
+
+		<div data-role="main" id="main_etapa2" class="ui-content">
+			<h3 align="center">Qual o seu problema?</h3>
+			<div style="width: 100%;text-align: center;">
+				<div style="display: inline-block;">
+					<img src="img/corpo1.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('Artrite')" data-role="button">Artrite</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/corpo2.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('Coluna')"  data-role="button">Coluna</a></p>
+				</div>
+				
+				
+				<div style="display:inline-block;">
+					<img src="img/corpo3.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('Dor Lombar')" data-role="button">Dor Lombar</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/corpo4.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('Joelho')"  data-role="button">Joelho</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/corpo1.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('Tendinite')" data-role="button">Tendinite</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/corpo2.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('Torcicolo')" data-role="button">Torcicolo</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/voltar.png">
+					<p align="center"><a href="#"  onclick="goBack()" data-role="button">Voltar</a></p>
+				</div>
+				
+				
+			</div>
+		</div>
+		<div data-role="footer">
+			
+		</div>
+
+	</div>
+	
+	
+	<div data-role="page" id="etapa1" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<h1 align="center">Especialidade</h1>
+		</div>
+
+		<div data-role="main" id="main_etapa1" class="ui-content">
+			<h3 align="center">Qual a especialidade que você procura?</h3>
+			<div style="width: 100%;text-align: center;">
+				<div style="display: inline-block;">
+					<img src="img/fisio1.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('Acupuntura')" data-role="button">Acupuntura</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/fisio2.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('CardioVascular')" data-role="button">CardioVascular</a></p>
+				</div>
+				
+				
+				<div style="display:inline-block;">
+					<img src="img/fisio3.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('Esportiva')" data-role="button">Esportiva</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/fisio4.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('Geriatria')" data-role="button">Geriatria</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/fisio5.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('RPG')" data-role="button">RPG</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/fisio6.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('Pediatria')" data-role="button">Pediatria</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/fisio7.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('Ortopedia')" data-role="button">Ortopedia</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/fisio8.png">
+					<p align="center"><a href="#" onclick="InformarEspecialidade('Osteopatia')" data-role="button">Osteopatia</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/voltar.png">
+					<p align="center"><a href="#"  onclick="goBack()" data-role="button">Voltar</a></p>
+				</div>
+				
+			</div>
+		</div>
+		<div data-role="footer">
+			
+		</div>
+
+	</div>
+	
+	<div data-role="page" id="etapa2" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<h1 align="center">Horário</h1>
+		</div>
+
+		<div data-role="main" id="main_etapa2" class="ui-content">
+			<h3 align="center">Qual a melhor forma de atendimento para você?</h3>
+			<div style="width: 100%;text-align: center;">
+				<div style="display: inline-block;">
+					<img src="img/casa.png">
+					<p align="center"><a href="#" onclick="InformarTipoAtendimento('Casa')" data-role="button">Na minha casa</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/consultorio.png">
+					<p align="center"><a href="#"  onclick="InformarTipoAtendimento('Consultorio')" data-role="button">No Consultório</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/voltar.png">
+					<p align="center"><a href="#"  onclick="goBack()" data-role="button">Voltar</a></p>
+				</div>
+				
+			</div>
+		</div>
+		<div data-role="footer">
+			
+		</div>
+
+	</div>
+	
+	<div data-role="page" id="etapa3" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<h1 align="center">Horário</h1>
+		</div>
+
+		<div data-role="main" id="main_etapa3" class="ui-content">
+			<h3 align="center">Qual o melhor horário para você?</h3>
+			<div style="width: 100%;text-align: center;">
+				<div style="display: inline-block;">
+					<img src="img/manha.png">
+					<p align="center"><a href="#" onclick="InformarHorario('Manha')" data-role="button">Manhã</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/tarde.png">
+					<p align="center"><a href="#" onclick="InformarHorario('Tarde')" data-role="button">Tarde</a></p>
+				</div>
+				
+				
+				<div style="display:inline-block;">
+					<img src="img/noite.png">
+					<p align="center"><a href="#" onclick="InformarHorario('Noite')" data-role="button">Noite</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/qualquer_horario.png">
+					<p align="center"><a href="#" onclick="InformarHorario('Qualquer horario')" data-role="button">Qualquer horário</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/voltar.png">
+					<p align="center"><a href="#"  onclick="goBack()" data-role="button">Voltar</a></p>
+				</div>
+				
+			</div>
+		</div>
+		<div data-role="footer">
+			
+		</div>
+
+	</div>
+	
+	<div data-role="page" id="etapa4" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<h1 align="center">Dia da Semana</h1>
+		</div>
+
+		<div data-role="main" id="main_etapa4" class="ui-content">
+			<h3 align="center">Qual o melhor dia para você?</h3>
+			<div style="width: 100%;text-align: center;">
+				<div style="display: inline-block;">
+					<img src="img/segunda.png">
+					<p align="center"><a href="#"  onclick="InformarDia('Segunda')" data-role="button">Segunda</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/terca.png">
+					<p align="center"><a href="#" onclick="InformarDia('Terca')" data-role="button">Terça</a></p>
+				</div>
+				
+				
+				<div style="display:inline-block;">
+					<img src="img/quarta.png">
+					<p align="center"><a href="#" onclick="InformarDia('Quarta')" data-role="button">Quarta</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/quinta.png">
+					<p align="center"><a href="#" onclick="InformarDia('Quinta')" data-role="button">Quinta</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/sexta.png">
+					<p align="center"><a href="#" onclick="InformarDia('Sexta')" data-role="button">Sexta</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/sabado.png">
+					<p align="center"><a href="#" onclick="InformarDia('Sabado')" data-role="button">Sábado</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/domingo.png">
+					<p align="center"><a href="#" onclick="InformarDia('Domingo')" data-role="button">Domingo</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/qualquer_dia.png">
+					<p align="center"><a href="#" onclick="InformarDia('Qualquer dia')" data-role="button">Qualquer dia</a></p>
+				</div>
+				
+				<div style="display:inline-block;">
+					<img src="img/voltar.png">
+					<p align="center"><a href="#"  onclick="goBack()" data-role="button">Voltar</a></p>
+				</div>
+				
+			</div>
+		</div>
+		<div data-role="footer">
+			
+		</div>
+
+	</div>
+	
+	<div data-role="page" id="etapa5" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<h1 align="center">Obrigado!</h1>
+		</div>
+
+		<div data-role="main" id="main_etapa5" class="ui-content">
+			<h3 align="center">Já temos todas as informações para te ajudar!</h3>
+			<p>Foram localizados xxx profissionais!</p>
+			<p>&nbsp;</p>
+			<div id="posicao_usuario"></div>
+			<p>&nbsp;</p>
+			<div id="resultados_pesquisa"></div>
+			<p>&nbsp;</p>
+			<p align="center"><a href="#listagem" data-role="button">Clique aqui para listar os profissionais encontrados!</a></p>
+		</div>
+		<div data-role="footer">
+			
+		</div>
+
+	</div>
+	
+	<div data-role="page" id="listagem" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<h1 align="center">Resultados de sua pesquisa!</h1>
+		</div>
+
+		<div data-role="main" id="main_listagem" class="ui-content">
+			<div class="ConteudoLista">
+			<br/>
+			<ul id="listview" data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true" data-filter-placeholder="Procurando por...">
+			</ul>
+			<p align="center"><a href="#main" data-role="button">Nova Pesquisa</a></p>
+			</div>
+			<div align="center">
+			<img src="img/ajax-loader.gif" id="loading">
+			</div>
+			
+		</div>
+		<div data-role="footer">
+			
+		</div>
+
+	</div>
+	
+	<div data-role="page" id="faleconosco" data-theme="a">
+
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" data-update-page-padding="false">
+			<h1 align="center">Fale Conosco</h1>
+		</div>
+
+		<div data-role="main" id="main" class="ui-content">
+			  <p>Mande sua mensagem. Entraremos em contato em breve!</p>
+			  <form id="check-contato" data-ajax="false">
+			  <div>
+				<div class="campos100">
+				<label for="fullname">Seu nome:</label>
+				<input type="text" name="nome_contato" id="nome_contato">
+				</div>
+				<div class="campos100">
+				<label for="email">E-mail:</label>
+				<input type="email" name="email_contato" id="email_contato" placeholder="Seu email.."><br/>
+				</div>
+				<div class="campos100">
+				<label for="info">Sua mensagem:</label>
+				<textarea name="mensagem_contato" id="mensagem_contato" rows="5"></textarea><br/>
+				</div>
+			  </div>
+			  <input type="submit" data-inline="true" id="enviar_contato" value="Enviar">
+			</form>
+		</div>
+
+	</div>
+	
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript">
+       // $(document).ready(onDeviceReady());
+    </script>
+</body>
+</html>
